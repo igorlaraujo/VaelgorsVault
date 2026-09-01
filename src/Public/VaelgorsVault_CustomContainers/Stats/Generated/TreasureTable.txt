@@ -1,0 +1,19 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+
+new treasuretable "TUT_Chest_Potions"
+CanMerge 1
+
+new subtable "1,1"
+object category "I_OBJ_VV_Weapons_Common",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_Weapons_Uncommon",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_Weapons_Rare",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_Weapons_VeryRare",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_Weapons_Legendary",1,0,0,0,0,0,0,0

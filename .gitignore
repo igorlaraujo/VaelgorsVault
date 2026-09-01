@@ -1,0 +1,28 @@
+# IDE and local environments
+.idea/
+.venv/
+
+# Local build output and packages
+Build/
+*.pak
+
+# Third-party and research material
+References/
+
+# Accidental npm artifacts
+node_modules/
+package.json
+package-lock.json
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Script Extender/runtime logs and temporary local files
+Logs/
+ScriptExtender/Logs/
+*.log
+*.tmp
+*.bak
+*.cache

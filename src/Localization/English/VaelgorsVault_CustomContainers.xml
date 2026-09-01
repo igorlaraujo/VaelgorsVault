@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+    <!-- Common Weapons -->
+    <content contentuid="h667622a7g1453g4b82gb98agb4fc74607a2a" version="1">Common Weapon Vault</content>
+    <content contentuid="h43398bb5g3c81g4f62g90f7g930c66ee3c71" version="1">A vault designed for the storage of common weapons.</content>
+    <content contentuid="hafb5525cgc1a2g4074gaaa1gace69537ca8a" version="1">Stores common weapons.</content>
+
+    <!-- Uncommon Weapons -->
+    <content contentuid="hef9c5f37gc523g4619ga373g1d35a907855a" version="1">Uncommon Weapon Vault</content>
+    <content contentuid="h7e45e0a2gc61ag48b9g82f2gda8a263e4050" version="1">A reinforced vault designed for the secure storage of uncommon weapons.</content>
+    <content contentuid="he3b06f4cgd4cdg4003g93b2g69e809d53e0c" version="1">Stores uncommon weapons.</content>
+
+    <!-- Rare Weapons — baseline preservada -->
+    <content contentuid="h271ab5c4g6fceg43c1ga91bg9d6759320d13" version="1">Rare Weapon Vault</content>
+    <content contentuid="h436e4897ga14dg4be7g8447g17c80da9cddc" version="1">A reinforced vault designed for the secure storage of rare weapons.</content>
+    <content contentuid="h9c0905ecg7100g417bg99e3gdaf87d56e30e" version="1">Stores rare weapons.</content>
+
+    <!-- Very Rare Weapons -->
+    <content contentuid="hda890a05g3d46g4d7egabc3ge09277b55c65" version="1">Very Rare Weapon Vault</content>
+    <content contentuid="ha1567966gb53cg410fg8093g7b97b13c6c28" version="1">A reinforced vault designed for the secure storage of very rare weapons.</content>
+    <content contentuid="hc97bcd2ega609g4419g8228g4bc07d3ad231" version="1">Stores very rare weapons.</content>
+
+    <!-- Legendary Weapons -->
+    <content contentuid="h8320d215gac0cg4f6cg8f8cg3af1e889c8a7" version="1">Legendary Weapon Vault</content>
+    <content contentuid="h10556e1agd1a6g435fgbf3bg73a0609b8b85" version="1">A formidable vault designed for the secure storage of legendary weapons.</content>
+    <content contentuid="h427030e9g3a45g4138g8566g202000fdb812" version="1">Stores legendary weapons.</content>
+</contentList>

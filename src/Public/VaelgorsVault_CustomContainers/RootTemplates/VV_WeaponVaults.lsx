@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="0"
+             lslib_meta="v1,bswap_guids,lsf_adjacency" />
+
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+
+                <!-- COMMON -->
+                <node id="GameObjects">
+                    <attribute id="Description"
+                               type="TranslatedString"
+                               handle="h43398bb5g3c81g4f62g90f7g930c66ee3c71"
+                               version="1" />
+
+                    <attribute id="DisplayName"
+                               type="TranslatedString"
+                               handle="h667622a7g1453g4b82gb98agb4fc74607a2a"
+                               version="1" />
+
+                    <attribute id="MapKey"
+                               type="FixedString"
+                               value="92f192d9-e70f-44b0-9d6a-a00ecbe8ca17" />
+
+                    <attribute id="Name"
+                               type="LSString"
+                               value="VV_Weapons_Common" />
+
+                    <attribute id="ParentTemplateId"
+                               type="FixedString"
+                               value="0e600db2-aa76-4c98-b4d5-a55c0853e7f1" />
+
+                    <attribute id="Stats"
+                               type="FixedString"
+                               value="OBJ_VV_Weapons_Common" />
+
+                    <attribute id="TechnicalDescription"
+                               type="TranslatedString"
+                               handle="hafb5525cgc1a2g4074gaaa1gace69537ca8a"
+                               version="1" />
+
+                    <attribute id="Type"
+                               type="FixedString"
+                               value="item" />
+
+                    <children>
+                        <node id="InventoryList">
+                            <children>
+                                <node id="InventoryItem">
+                                    <attribute id="Object"
+                                               type="FixedString"
+                                               value="Empty" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+
+
+                <!-- UNCOMMON -->
+                <node id="GameObjects">
+                    <attribute id="Description"
+                               type="TranslatedString"
+                               handle="h7e45e0a2gc61ag48b9g82f2gda8a263e4050"
+                               version="1" />
+
+                    <attribute id="DisplayName"
+                               type="TranslatedString"
+                               handle="hef9c5f37gc523g4619ga373g1d35a907855a"
+                               version="1" />
+
+                    <attribute id="MapKey"
+                               type="FixedString"
+                               value="0bfcd877-4dac-4829-a9f7-72fecaad9643" />
+
+                    <attribute id="Name"
+                               type="LSString"
+                               value="VV_Weapons_Uncommon" />
+
+                    <attribute id="ParentTemplateId"
+                               type="FixedString"
+                               value="0e600db2-aa76-4c98-b4d5-a55c0853e7f1" />
+
+                    <attribute id="Stats"
+                               type="FixedString"
+                               value="OBJ_VV_Weapons_Uncommon" />
+
+                    <attribute id="TechnicalDescription"
+                               type="TranslatedString"
+                               handle="he3b06f4cgd4cdg4003g93b2g69e809d53e0c"
+                               version="1" />
+
+                    <attribute id="Type"
+                               type="FixedString"
+                               value="item" />
+
+                    <children>
+                        <node id="InventoryList">
+                            <children>
+                                <node id="InventoryItem">
+                                    <attribute id="Object"
+                                               type="FixedString"
+                                               value="Empty" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+
+
+                <!-- RARE — BASELINE JÁ VALIDADA -->
+                <node id="GameObjects">
+                    <attribute id="Description"
+                               type="TranslatedString"
+                               handle="h436e4897ga14dg4be7g8447g17c80da9cddc"
+                               version="1" />
+
+                    <attribute id="DisplayName"
+                               type="TranslatedString"
+                               handle="h271ab5c4g6fceg43c1ga91bg9d6759320d13"
+                               version="1" />
+
+                    <attribute id="MapKey"
+                               type="FixedString"
+                               value="70fbde6f-a5bb-4305-a522-08f97ee6941b" />
+
+                    <attribute id="Name"
+                               type="LSString"
+                               value="VV_Weapons_Rare" />
+
+                    <attribute id="ParentTemplateId"
+                               type="FixedString"
+                               value="0e600db2-aa76-4c98-b4d5-a55c0853e7f1" />
+
+                    <attribute id="Stats"
+                               type="FixedString"
+                               value="OBJ_VV_Weapons_Rare" />
+
+                    <attribute id="TechnicalDescription"
+                               type="TranslatedString"
+                               handle="h9c0905ecg7100g417bg99e3gdaf87d56e30e"
+                               version="1" />
+
+                    <attribute id="Type"
+                               type="FixedString"
+                               value="item" />
+
+                    <children>
+                        <node id="InventoryList">
+                            <children>
+                                <node id="InventoryItem">
+                                    <attribute id="Object"
+                                               type="FixedString"
+                                               value="Empty" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+
+
+                <!-- VERY RARE -->
+                <node id="GameObjects">
+                    <attribute id="Description"
+                               type="TranslatedString"
+                               handle="ha1567966gb53cg410fg8093g7b97b13c6c28"
+                               version="1" />
+
+                    <attribute id="DisplayName"
+                               type="TranslatedString"
+                               handle="hda890a05g3d46g4d7egabc3ge09277b55c65"
+                               version="1" />
+
+                    <attribute id="MapKey"
+                               type="FixedString"
+                               value="25ea810a-1651-48ff-bf81-5e87c25276cd" />
+
+                    <attribute id="Name"
+                               type="LSString"
+                               value="VV_Weapons_VeryRare" />
+
+                    <attribute id="ParentTemplateId"
+                               type="FixedString"
+                               value="0e600db2-aa76-4c98-b4d5-a55c0853e7f1" />
+
+                    <attribute id="Stats"
+                               type="FixedString"
+                               value="OBJ_VV_Weapons_VeryRare" />
+
+                    <attribute id="TechnicalDescription"
+                               type="TranslatedString"
+                               handle="hc97bcd2ega609g4419g8228g4bc07d3ad231"
+                               version="1" />
+
+                    <attribute id="Type"
+                               type="FixedString"
+                               value="item" />
+
+                    <children>
+                        <node id="InventoryList">
+                            <children>
+                                <node id="InventoryItem">
+                                    <attribute id="Object"
+                                               type="FixedString"
+                                               value="Empty" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+
+
+                <!-- LEGENDARY -->
+                <node id="GameObjects">
+                    <attribute id="Description"
+                               type="TranslatedString"
+                               handle="h10556e1agd1a6g435fgbf3bg73a0609b8b85"
+                               version="1" />
+
+                    <attribute id="DisplayName"
+                               type="TranslatedString"
+                               handle="h8320d215gac0cg4f6cg8f8cg3af1e889c8a7"
+                               version="1" />
+
+                    <attribute id="MapKey"
+                               type="FixedString"
+                               value="36d997e4-7b9e-4117-803c-61d39c5fa72d" />
+
+                    <attribute id="Name"
+                               type="LSString"
+                               value="VV_Weapons_Legendary" />
+
+                    <attribute id="ParentTemplateId"
+                               type="FixedString"
+                               value="0e600db2-aa76-4c98-b4d5-a55c0853e7f1" />
+
+                    <attribute id="Stats"
+                               type="FixedString"
+                               value="OBJ_VV_Weapons_Legendary" />
+
+                    <attribute id="TechnicalDescription"
+                               type="TranslatedString"
+                               handle="h427030e9g3a45g4138g8566g202000fdb812"
+                               version="1" />
+
+                    <attribute id="Type"
+                               type="FixedString"
+                               value="item" />
+
+                    <children>
+                        <node id="InventoryList">
+                            <children>
+                                <node id="InventoryItem">
+                                    <attribute id="Object"
+                                               type="FixedString"
+                                               value="Empty" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,7 @@
+{
+    "RequiredVersion": 12,
+    "ModTable": "VaelgorsVault_CustomContainers",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}
