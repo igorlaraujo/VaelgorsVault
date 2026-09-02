@@ -8,6 +8,8 @@ The first implemented family is Weapon Vaults separated by rarity: Common, Uncom
 
 Vault withdrawals are intentional: removing a weapon from a Vault to a player inventory prevents an immediate re-sort. Reinserting the weapon arms the behavior again, and this state persists through save/reload.
 
+One-Handed Weapon Vault containers for the same five rarities are included in the current development package and await direct in-game validation. They do not add one-handed-specific autosort behavior.
+
 ## Dependency
 
 The current mod core depends on Baldur's Gate 3 Script Extender Lua functionality. Current development observations are recorded in [Docs/STATE.md](Docs/STATE.md).

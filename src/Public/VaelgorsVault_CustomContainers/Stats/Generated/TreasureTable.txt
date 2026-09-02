@@ -17,3 +17,49 @@ object category "I_OBJ_VV_Weapons_VeryRare",1,0,0,0,0,0,0,0
 
 new subtable "1,1"
 object category "I_OBJ_VV_Weapons_Legendary",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_OneHandedWeapons_Common",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_OneHandedWeapons_Uncommon",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_OneHandedWeapons_Rare",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_OneHandedWeapons_VeryRare",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_OneHandedWeapons_Legendary",1,0,0,0,0,0,0,0
+
+new subtable "1,1"
+object category "I_OBJ_VV_TwoHandedWeapons_Common",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_TwoHandedWeapons_Uncommon",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_TwoHandedWeapons_Rare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_TwoHandedWeapons_VeryRare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_TwoHandedWeapons_Legendary",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_RangedWeapons_Common",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_RangedWeapons_Uncommon",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_RangedWeapons_Rare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_RangedWeapons_VeryRare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_RangedWeapons_Legendary",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_Daggers_Common",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_Daggers_Uncommon",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_Daggers_Rare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_Daggers_VeryRare",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_OBJ_VV_Daggers_Legendary",1,0,0,0,0,0,0,0

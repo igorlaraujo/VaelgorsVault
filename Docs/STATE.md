@@ -85,7 +85,8 @@ VaelgorsVault/
 │   └── Public/
 │       └── VaelgorsVault_CustomContainers/
 │           ├── RootTemplates/
-│           │   └── VV_WeaponVaults.lsx
+│           │   ├── VV_WeaponVaults_Rarity.lsx
+│           │   └── VV_WeaponVaults_ByType.lsx
 │           └── Stats/
 │               └── Generated/
 │                   ├── Data/
@@ -157,7 +158,8 @@ confirmed that the PAK contains:
 
 ```text
 Localization/English/VaelgorsVault_CustomContainers.loca
-Public/VaelgorsVault_CustomContainers/RootTemplates/VV_WeaponVaults.lsf
+Public/VaelgorsVault_CustomContainers/RootTemplates/VV_WeaponVaults_Rarity.lsf
+Public/VaelgorsVault_CustomContainers/RootTemplates/VV_WeaponVaults_ByType.lsf
 Public/VaelgorsVault_CustomContainers/Stats/Generated/Data/Object.txt
 Public/VaelgorsVault_CustomContainers/Stats/Generated/TreasureTable.txt
 ```
@@ -202,32 +204,29 @@ Manual PAK copying remains a valid fallback when running builds from restricted 
 
 ## 5. Weapon Vault architecture
 
-### RootTemplate family file
+### RootTemplate files
 
-All weapon-rarity Vaults are grouped in:
-
-```text
-src\Public\VaelgorsVault_CustomContainers\RootTemplates\VV_WeaponVaults.lsx
-```
-
-Validated organization:
+The Weapon Vault family is organized into a stable core and a type extension:
 
 ```text
-VV_WeaponVaults.lsx
-├── Common
-├── Uncommon
-├── Rare
-├── Very Rare
-└── Legendary
+RootTemplates/
+├── VV_WeaponVaults_Rarity.lsx
+│   ├── Common
+│   ├── Uncommon
+│   ├── Rare
+│   ├── Very Rare
+│   └── Legendary
+└── VV_WeaponVaults_ByType.lsx
+    ├── One-Handed Common
+    ├── One-Handed Uncommon
+    ├── One-Handed Rare
+    ├── One-Handed Very Rare
+    └── One-Handed Legendary
 ```
 
-A single LSX containing multiple `GameObjects` successfully converts to one `VV_WeaponVaults.lsf` and loads in-game.
+The build recursively converts both source files to `VV_WeaponVaults_Rarity.lsf` and `VV_WeaponVaults_ByType.lsf`. The generated PAK contains both LSF files; no LSX is retained in its RootTemplates directory.
 
-Current architectural rule:
-
-> One RootTemplate LSX per item family, with the relevant variants/rarities grouped inside it.
-
-Do not create one LSX per individual container unless a concrete technical reason appears.
+`Object.txt`, `TreasureTable.txt`, and the English localization XML remain unified. The build copies/compiles files recursively, but runtime merging of multiple Stats, TreasureTable, or LOCA files has not been directly validated for this module.
 
 ### Shared ParentTemplate
 
@@ -299,9 +298,31 @@ Current English text:
 - Stats: `OBJ_VV_Weapons_Legendary`
 - RootTemplate UUID: `36d997e4-7b9e-4117-803c-61d39c5fa72d`
 
+### One-Handed Weapon Vaults
+
+The following RootTemplates, Object Stats, English localization entries, and Tutorial Chest categories are build-validated but still need direct in-game testing:
+
+- Common: `VV_OneHandedWeapons_Common` / `OBJ_VV_OneHandedWeapons_Common` / `4b7da40d-596b-42d4-be19-9e1aa13fded0`
+- Uncommon: `VV_OneHandedWeapons_Uncommon` / `OBJ_VV_OneHandedWeapons_Uncommon` / `c304459c-f469-43ea-b40f-6090be22f25d`
+- Rare: `VV_OneHandedWeapons_Rare` / `OBJ_VV_OneHandedWeapons_Rare` / `0947a3b8-5b1e-48e2-a7e2-339131b25890`
+- Very Rare: `VV_OneHandedWeapons_VeryRare` / `OBJ_VV_OneHandedWeapons_VeryRare` / `699486a3-d436-48b2-9fd5-bb469fa59761`
+- Legendary: `VV_OneHandedWeapons_Legendary` / `OBJ_VV_OneHandedWeapons_Legendary` / `d53ded6c-cd58-4040-b494-4df9e1c8656f`
+
+The runtime sorter routes One-Handed weapons through the ByType family at the matching runtime rarity. This routing is PASS in-game for rarities `0` through `4`.
+
+### Additional ByType Weapon Vaults
+
+The following Two-Handed, Ranged, and Dagger Vaults are delivered through the Tutorial Chest. The runtime sorter selects the matching ByType Vault at each runtime rarity; this routing is PASS in-game for rarities `0` through `4`.
+
+| Family | Common | Uncommon | Rare | Very Rare | Legendary |
+|---|---|---|---|---|---|
+| Two-Handed | `fd7780b2-cd2b-4271-af6b-a992c170db1f` | `18900e0d-e5b9-4d91-a74c-28d953e89283` | `15f0f8f5-9425-476f-aab4-50d14f3c2c66` | `a2c544d1-9e25-4300-a522-cf04943f5353` | `0e86d258-6675-4dd3-81dd-0d6de751e10f` |
+| Ranged | `aa474431-2cde-4959-a7c1-069dffdeb469` | `30c376fe-c0d7-4a40-af0a-9567c010d3b9` | `4a81581f-d186-443a-a190-de6e7cb004ea` | `42e7356f-7396-490c-a0ba-c9ed9ff87ce0` | `73d1ebb3-8579-4a91-b782-a1bbfc08e4c0` |
+| Daggers | `e2be7ca4-5e99-43a3-9d4b-e0a55da22fa6` | `2b45683c-01c3-47b4-a47a-6d1729d56b7b` | `873a2cd0-9952-41b5-b0d2-0e85947bbce5` | `6ee8e987-ebc4-467f-b2d4-8886aa960f4c` | `e6a8e362-3647-43dd-aa3f-b430d29e0423` |
+
 ## 7. Stats definitions
 
-`Object.txt` currently defines five Object Stats entries:
+`Object.txt` currently defines ten Object Stats entries: the five original Weapon Vault entries and five One-Handed Weapon Vault entries.
 
 ```text
 OBJ_VV_Weapons_Common
@@ -329,6 +350,10 @@ A Codex read-only audit detected the inconsistency between the actual source fil
 
 The corrected definitions were verified both in staging and in the generated PAK.
 
+### Current file organization
+
+The twenty-five Object Stats remain in one `Object.txt`. They are not split by Core Rarity/ByType until multi-file Stats loading is directly verified in-game.
+
 ## 8. Runtime rarity mapping
 
 Runtime lookup:
@@ -342,19 +367,12 @@ Ext.Entity.Get(item).Value.Rarity
 | Runtime value | Rarity | Status |
 |---:|---|---|
 | `0` | Common | PASS |
-| `1` | Uncommon | **Needs direct test** |
+| `1` | Uncommon | PASS |
 | `2` | Rare | PASS |
 | `3` | Very Rare | PASS |
 | `4` | Legendary | PASS |
 
-Evidence used:
-
-- vanilla quarterstaff → Common = `0`;
-- Evelyn test item Rare → `2`;
-- Evelyn test item Very Rare → `3`;
-- Evelyn test item Legendary → `4`.
-
-Uncommon = `1` remains technically expected but not yet directly verified with an actual Uncommon weapon in the current test session.
+All runtime values from `0` through `4` are directly confirmed in-game.
 
 ## 9. Autosort implementation
 
@@ -416,6 +434,24 @@ Osi.ToInventory(
     0
 )
 ```
+
+### Type × Rarity routing
+
+The sorter reads `Osi.GetStatString(item)` and checks the resolved weapon Stats entry after determining its runtime rarity. Classification priority is:
+
+1. `Proficiency Group` contains `Daggers`;
+2. `Slot` equals `Ranged Main Weapon`;
+3. `Weapon Properties` contains `Twohanded`;
+4. `Slot` equals `Melee Main Weapon` or `Melee Offhand Weapon` for One-Handed;
+5. otherwise, no type is resolved.
+
+Each class routes to its matching ByType Vault at the same rarity. If the Stats entry, any required classifier, or the specific ByType Vault cannot be resolved, the existing Core Rarity Vault remains the fallback. Runtime routing is PASS for Daggers, Ranged, Two-Handed, and One-Handed weapons across rarities `0` through `4`.
+
+`Take All`, Core fallback, and the manual-withdrawal state are PASS with this routing. The manual withdrawal state recognizes Core and ByType Vault runtime templates.
+
+### Pending edge case
+
+`Kingsknife` currently resolves as `unknown` and routes to the matching Core Rarity Vault. This is an expected safe fallback, but its Stats classification requires later inspection before any classifier change.
 
 ### Current scope
 
@@ -559,7 +595,7 @@ Current decision:
 - Very Rare = `3`
 - Legendary = `4`
 
-Uncommon = `1` still pending direct validation.
+Uncommon = `1` is now directly validated in-game.
 
 ### Test 04 — Rare autosort
 
@@ -593,28 +629,39 @@ Historical failure retained for traceability.
 - reload;
 - manual withdrawal still works.
 
-### Test 08 — Multi-GameObject RootTemplate family
+### Test 08 — Multi-GameObject RootTemplate baseline (historical)
 
 **PASS**
 
-- `VV_WeaponVaults.lsx` containing five `GameObjects` converts successfully;
+- the former `VV_WeaponVaults.lsx` containing five original `GameObjects` converted successfully;
 - all five templates can be spawned by UUID;
-- one LSX per item family is a valid current architecture.
+- retained as the pre-Core-Rarity/ByType baseline.
 
-### Test 09 — Multi-rarity autosort
+### Test 12 — Core Rarity + ByType RootTemplate build
 
-**PARTIAL PASS**
+**PASS (package structure)**
 
-Directly confirmed:
+- `VV_WeaponVaults_Rarity.lsx` and `VV_WeaponVaults_ByType.lsx` each convert to LSF;
+- the generated PAK contains both LSF files and no RootTemplate LSX;
+- original UUIDs, Object Stats names, and localization handles remain unchanged by static verification.
 
-- Common → Common Weapon Vault;
-- Rare → Rare Weapon Vault;
-- Very Rare → Very Rare Weapon Vault;
-- Legendary → Legendary Weapon Vault.
+In-game loading of the split RootTemplates remains pending.
 
-Pending:
+### Test 09 — Type × Rarity autosort
 
-- actual Uncommon weapon → Uncommon Weapon Vault.
+**PASS**
+
+Directly confirmed in-game:
+
+- Daggers, Ranged, Two-Handed, and One-Handed weapons route to the matching ByType Vault;
+- runtime rarities `0` through `4` route to their matching rarity;
+- `Take All` works with the sorter;
+- unresolved classification or unavailable matching ByType Vault falls back to Core Rarity;
+- manual withdrawal remains functional with Core and ByType Vaults.
+
+Pending edge case:
+
+- `Kingsknife` → `unknown` → Core Rarity fallback; inspect its Stats before changing classifiers.
 
 ### Test 10 — Tutorial Chest delivery
 
@@ -734,6 +781,12 @@ The integration passed after restoring the five required `OBJ_VV_Weapons_*` Obje
 
 Tutorial Chest Summoning is currently a development/test fixture and is **not** a Vaelgor's Vault dependency.
 
+### One-Handed Weapon Vault entries
+
+Five One-Handed Weapon Vault categories were added to `TUT_Chest_Potions` following the validated original Weapon Vault pattern. Their presence in `TreasureTable.txt`, staging, and the generated PAK is confirmed; a newly summoned Tutorial Chest has not yet been tested in-game with these new entries.
+
+`TreasureTable.txt` remains unified until multi-file TreasureTable merge behavior is directly verified in-game.
+
 ## 15. Localization
 
 ### Status
@@ -790,6 +843,8 @@ for all five Vaults.
 
 The rebuilt PAK and in-game test confirmed the fix.
 
+The English localization remains in one XML/LOCA pair until multi-file LOCA behavior is directly verified in-game.
+
 ## 16. Current dependencies / test fixtures
 
 Current clean test environment has temporarily used:
@@ -821,35 +876,38 @@ World collection may be evaluated later as an optional/separate feature.
 
 ## 18. Current priority order
 
-1. Directly validate `Uncommon = 1` with an actual Uncommon weapon.
-2. Test interaction with the existing inventory hotkey/reorganization mod:
+1. Inspect the `Kingsknife` Stats classification before changing any classifier.
+2. Test the ByType Vaults in-game: spawn/delivery, localization, storage, save/reload, and removal/rollback behavior.
+3. Test interaction with the existing inventory hotkey/reorganization mod:
    - keep a weapon manually outside its Vault;
    - trigger inventory reorganize hotkey;
    - observe whether `TemplateAddedTo` causes Vaelgor autosort.
-3. Record the current Weapon Vault family as the first stable functional baseline.
-4. Clean repository-only development artifacts.
-5. Initialize Git and create the first private GitHub repository/commit.
-6. Preserve the current Weapon implementation unless a concrete regression appears.
-7. Choose and implement the next item family using the Weapon Vault pattern.
-8. Evaluate broader compatibility, installation, update/removal and release requirements later.
+4. Record the current Weapon implementation as the first stable functional baseline.
+5. Clean repository-only development artifacts.
+6. Initialize Git and create the first private GitHub repository/commit.
+7. Preserve the current Weapon implementation unless a concrete regression appears.
+8. Choose and implement the next item family using the Weapon Vault pattern.
+9. Evaluate broader compatibility, installation, update/removal and release requirements later.
 
 ## 19. Known good baseline
 
 Current known-good functional core:
 
 - five physical Weapon Vault containers;
-- one LSX for the complete Weapon family;
+- Core Rarity and ByType RootTemplate LSX files for the complete Weapon family;
 - correct Object Stats for all five Vaults;
 - correct English localization for all five Vaults;
 - Tutorial Chest delivery for all five Vaults;
 - runtime weapon detection;
-- runtime rarity detection confirmed for Common/Rare/Very Rare/Legendary;
-- rarity-specific autosort;
+- runtime rarity detection confirmed for `0` through `4`;
+- Type × Rarity autosort for Daggers, Ranged, Two-Handed, and One-Handed weapons;
+- Core Rarity fallback for unresolved classification or unavailable ByType Vaults;
+- `Take All` behavior with autosort;
 - manual withdrawal exception;
 - persistent withdrawal state;
 - save/reload persistence;
 - accepted drop behavior;
-- multi-rarity routing for Common/Rare/Very Rare/Legendary;
+- multi-rarity routing for Common/Uncommon/Rare/Very Rare/Legendary;
 - working LSX → LSF conversion;
 - working XML → LOCA conversion;
 - generated PAK structurally validated;
@@ -857,8 +915,7 @@ Current known-good functional core:
 
 Pending only if not yet directly tested:
 
-- Uncommon runtime rarity `1`;
-- Uncommon autosort with an actual Uncommon weapon;
+- `Kingsknife` Stats classification; it currently uses the safe Core Rarity fallback;
 - compatibility behavior with the existing inventory reorganization hotkey.
 
 If a future change causes a serious regression:

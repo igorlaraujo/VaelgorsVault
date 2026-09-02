@@ -38,7 +38,8 @@ BG3_MODS = (
 
 REQUIRED_PAK_PATHS = {
     f"Mods/{MOD_NAME}/meta.lsx",
-    f"Public/{MOD_NAME}/RootTemplates/VV_WeaponVaults.lsf",
+    f"Public/{MOD_NAME}/RootTemplates/VV_WeaponVaults_Rarity.lsf",
+    f"Public/{MOD_NAME}/RootTemplates/VV_WeaponVaults_ByType.lsf",
     f"Public/{MOD_NAME}/Stats/Generated/Data/Object.txt",
     f"Localization/English/{MOD_NAME}.loca",
 }

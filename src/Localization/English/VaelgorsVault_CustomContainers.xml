@@ -24,4 +24,79 @@
     <content contentuid="h8320d215gac0cg4f6cg8f8cg3af1e889c8a7" version="1">Legendary Weapon Vault</content>
     <content contentuid="h10556e1agd1a6g435fgbf3bg73a0609b8b85" version="1">A formidable vault designed for the secure storage of legendary weapons.</content>
     <content contentuid="h427030e9g3a45g4138g8566g202000fdb812" version="1">Stores legendary weapons.</content>
+
+    <!-- Common One-Handed Weapons -->
+    <content contentuid="he4dca9abg4848g4277gb157gd17d3efb2406" version="1">Common One-Handed Weapon Vault</content>
+    <content contentuid="h709155ffg9438g4442g9af9g4e17d59db02f" version="1">A vault designed for the storage of common one-handed weapons.</content>
+    <content contentuid="hb0da76abg9960g47d5ga632ga4fd1ead1f49" version="1">Stores common one-handed weapons.</content>
+
+    <!-- Uncommon One-Handed Weapons -->
+    <content contentuid="h42f93a62g79f5g45efg8963g6b3384e5b807" version="1">Uncommon One-Handed Weapon Vault</content>
+    <content contentuid="hd6737ee7g7a98g4b7cg82e0g7edf25a8b14c" version="1">A reinforced vault designed for the secure storage of uncommon one-handed weapons.</content>
+    <content contentuid="hc3a6c907g0d2fg4990g9e68g697a5dd8b640" version="1">Stores uncommon one-handed weapons.</content>
+
+    <!-- Rare One-Handed Weapons -->
+    <content contentuid="h90008fc1ge4bcg416cgb493g042d2bbd1ab2" version="1">Rare One-Handed Weapon Vault</content>
+    <content contentuid="hd3d78db8gc2f7g463egaa82gfaf8d47004ff" version="1">A reinforced vault designed for the secure storage of rare one-handed weapons.</content>
+    <content contentuid="hf79032adgf30fg4ab9g97c4ge9662e3d13be" version="1">Stores rare one-handed weapons.</content>
+
+    <!-- Very Rare One-Handed Weapons -->
+    <content contentuid="hebfc391dg98f1g40cdg8cfbga0376fe19b5a" version="1">Very Rare One-Handed Weapon Vault</content>
+    <content contentuid="h1c7d0ec6g5c15g4298gbcb1ge12965f2c296" version="1">A reinforced vault designed for the secure storage of very rare one-handed weapons.</content>
+    <content contentuid="h8cbd8aa0g9c86g4ec5gb866gfb8da4fbbd13" version="1">Stores very rare one-handed weapons.</content>
+
+    <!-- Legendary One-Handed Weapons -->
+    <content contentuid="hc261aff5g0943g4bbbg91e8g076ffe94de53" version="1">Legendary One-Handed Weapon Vault</content>
+    <content contentuid="hf48211e0g8adeg4371gb57dg93f16b72d9b2" version="1">A formidable vault designed for the secure storage of legendary one-handed weapons.</content>
+    <content contentuid="h01538580g4d45g4a3ag97dcg0bfab8baf918" version="1">Stores legendary one-handed weapons.</content>
+    <!-- Two-Handed Weapons -->
+    <content contentuid="h33e06761g1b56g4794gacfcg4973162edb89" version="1">Common Two-Handed Weapon Vault</content>
+    <content contentuid="hef55b8bagc0a5g41c5g88e9g566934492c46" version="1">A vault designed for the storage of common two-handed weapons.</content>
+    <content contentuid="hd98e7dd9g8ecag40ffga270g0a11aebc4b20" version="1">Stores common two-handed weapons.</content>
+    <content contentuid="h31772ceegb88bg4f05gbb26g63bd9991ec6a" version="1">Uncommon Two-Handed Weapon Vault</content>
+    <content contentuid="h8e91605aga9b9g4d4cga1d4g12dcef195f60" version="1">A reinforced vault designed for the secure storage of uncommon two-handed weapons.</content>
+    <content contentuid="h05447537g6c8eg46ddg8af0g55554e36ea2d" version="1">Stores uncommon two-handed weapons.</content>
+    <content contentuid="h26f81f81g6bebg4c48g8180g071781fd7092" version="1">Rare Two-Handed Weapon Vault</content>
+    <content contentuid="hd3e98f6cgdb89g482eg8d84gfc6f41f979bd" version="1">A reinforced vault designed for the secure storage of rare two-handed weapons.</content>
+    <content contentuid="h4eafcfb8g00efg4727g8b11g3dedff9b6615" version="1">Stores rare two-handed weapons.</content>
+    <content contentuid="hb0cbb424g4672g43d2gbc2bgec4aeba520b5" version="1">Very Rare Two-Handed Weapon Vault</content>
+    <content contentuid="hde2d8c59g9b5ag41c6gac0eg927036793423" version="1">A reinforced vault designed for the secure storage of very rare two-handed weapons.</content>
+    <content contentuid="hc2914d6fg87a9g4569g9c6bg3a0c1466b22d" version="1">Stores very rare two-handed weapons.</content>
+    <content contentuid="h489c4ac5g38d5g4e20g8318gf26d9e98c9c4" version="1">Legendary Two-Handed Weapon Vault</content>
+    <content contentuid="h682d8f1fg97dag4413g90cfg99dc340cf252" version="1">A formidable vault designed for the secure storage of legendary two-handed weapons.</content>
+    <content contentuid="hfea38de1g298ag476dgb718g9008d71466a1" version="1">Stores legendary two-handed weapons.</content>
+
+    <!-- Ranged Weapons -->
+    <content contentuid="h4e92d642g08ffg4c56ga375g6732859347e3" version="1">Common Ranged Weapon Vault</content>
+    <content contentuid="h3b330f9bg63e0g4cc8ga37egc84676ed9bce" version="1">A vault designed for the storage of common ranged weapons.</content>
+    <content contentuid="hd83d99bdg4796g41b2g9e3egef8629c59928" version="1">Stores common ranged weapons.</content>
+    <content contentuid="h9ebbddd6ga68eg443eg816cg14d189f3dab6" version="1">Uncommon Ranged Weapon Vault</content>
+    <content contentuid="hbb51429cgf57eg45c6gbc21gfff5ff840354" version="1">A reinforced vault designed for the secure storage of uncommon ranged weapons.</content>
+    <content contentuid="habe10e88g1560g4439g9499g171b822a000b" version="1">Stores uncommon ranged weapons.</content>
+    <content contentuid="hf9d10190gb436g452eg9905g1eb03e21eca4" version="1">Rare Ranged Weapon Vault</content>
+    <content contentuid="h90b54537g0c61g43e6gb73eg116d2112ce93" version="1">A reinforced vault designed for the secure storage of rare ranged weapons.</content>
+    <content contentuid="hf8146029gbf18g4134g897cg6f54c7678341" version="1">Stores rare ranged weapons.</content>
+    <content contentuid="h0ea30548g1765g43f0gbb40g56ca80a05942" version="1">Very Rare Ranged Weapon Vault</content>
+    <content contentuid="hb904063eg2f61g4690ga135gd4a3a4b13b52" version="1">A reinforced vault designed for the secure storage of very rare ranged weapons.</content>
+    <content contentuid="h55c44897gd4cdg4b96gb472g5c3addedbac4" version="1">Stores very rare ranged weapons.</content>
+    <content contentuid="hbbbe3364gf0d0g46b3gb034gaeb1c576a30b" version="1">Legendary Ranged Weapon Vault</content>
+    <content contentuid="h263f6ff1gef12g4083g94ddg97989edd0cb7" version="1">A formidable vault designed for the secure storage of legendary ranged weapons.</content>
+    <content contentuid="he236453fg31aag4d98gb8f2ga38a619b189c" version="1">Stores legendary ranged weapons.</content>
+
+    <!-- Daggers -->
+    <content contentuid="hdd43c103g56bdg4bfegbb5fgf99bb38817c1" version="1">Common Dagger Vault</content>
+    <content contentuid="hf8eccd86g0966g4506g9219g66e5a9c3fad1" version="1">A vault designed for the storage of common daggers.</content>
+    <content contentuid="h1ddbc210g6b6cg4aa4ga6dfg48a41cf2ed3c" version="1">Stores common daggers.</content>
+    <content contentuid="h154c9476gdbcfg4213ga913ga20dca836255" version="1">Uncommon Dagger Vault</content>
+    <content contentuid="h42950836g9476g4633ga3dcgdab749c5076f" version="1">A reinforced vault designed for the secure storage of uncommon daggers.</content>
+    <content contentuid="h27ccc7ecga9efg4e01g8fe0g8fd55bd9d4e7" version="1">Stores uncommon daggers.</content>
+    <content contentuid="h595a8b60g5152g4977gafaegf574a6bdb8b8" version="1">Rare Dagger Vault</content>
+    <content contentuid="h97be40e0g72cdg4cf4gaa8egb152bbc8e50a" version="1">A reinforced vault designed for the secure storage of rare daggers.</content>
+    <content contentuid="h6398c172g1ee5g4c8eg93b3g39478da807bd" version="1">Stores rare daggers.</content>
+    <content contentuid="haad3f1f8gab33g4ed0g94e2g8884715dd404" version="1">Very Rare Dagger Vault</content>
+    <content contentuid="h2388db42gf48bg439egb873g79a0acfce31b" version="1">A reinforced vault designed for the secure storage of very rare daggers.</content>
+    <content contentuid="h8872ba0dg60f1g442dg96b3g4c52f07250c0" version="1">Stores very rare daggers.</content>
+    <content contentuid="h13befff9gffcag47d2gb132g2d330bc65940" version="1">Legendary Dagger Vault</content>
+    <content contentuid="hd335a6c0gad7eg416bga32dgf194bac309a6" version="1">A formidable vault designed for the secure storage of legendary daggers.</content>
+    <content contentuid="haed99f91gf908g4edfg8c04g66ea4d20c918" version="1">Stores legendary daggers.</content>
 </contentList>
